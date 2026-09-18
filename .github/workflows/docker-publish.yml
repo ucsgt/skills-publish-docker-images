@@ -18,8 +18,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          username: ucspg
+          password: ${{ secrets.DOCKER_ACCESS}}
       - name: Build and push Docker image
         run: |
           docker build . --tag ghcr.io/ucsgt/skills-publish-docker-images/stackoverflown:main
